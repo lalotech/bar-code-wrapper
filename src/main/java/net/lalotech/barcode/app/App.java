@@ -16,8 +16,12 @@ import net.lalotech.barcode.MediaType;
 public class App {
     public static void main(String[] args) throws Exception{
         
-        String basePath = "C:\\Users\\Eduardo\\Documents\\";        
-        BarCode.from("12345678901234").format(MediaType.PNG).toGrayScale(true).type(CodeBarType.INTl2of5).file(basePath,"int12of5");
+        String basePath = "C:\\Users\\Eduardo\\Documents\\NetBeansProjects\\bar-code-wrapper\\src\\main\\java\\net\\lalotech\\barcode\\samples";        
+        BarCode.from("12345678901234567890").
+                format(MediaType.PNG).
+                toGrayScale(true).
+                type(CodeBarType.DATAMATRIX).
+                file(basePath, "datamatrix");
         
     }
 }
